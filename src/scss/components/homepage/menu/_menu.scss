@@ -21,10 +21,6 @@
 			margin-left: 10px;
 			font-size: 1.5rem;
 
-			&__element {
-				list-style: none;
-			}
-
 			&__link {
 				display: inline;
 				text-decoration: none;
@@ -52,7 +48,6 @@
 
 			&__link {
 				display: inline;
-				text-decoration: none;
 				padding: 0 10px;
 				color: $logo-main;
 
