@@ -14,7 +14,7 @@ body {
 		'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: $backgroud-main;
+	background-color: $background-main;
 }
 
 a {
@@ -28,3 +28,5 @@ a {
 
 
 @import 'components/homepage/menu/menu';
+@import 'components/homepage/opening/opening';
+
