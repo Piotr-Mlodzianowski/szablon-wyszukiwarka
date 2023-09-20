@@ -17,6 +17,10 @@ body {
 	background-color: $backgroud-main;
 }
 
+a {
+	text-decoration: none;
+}
+
 .container {
 	margin: 0 auto;
 	max-width: 1300px;
