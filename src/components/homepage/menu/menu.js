@@ -11,7 +11,7 @@ const Menu = () => {
                 <nav className='navigation'>
 				<ul className='navList'>
 					<li className='navList__element'>
-						<a className='navList__link' href='#'>
+						<a className='navList__link' href='#opening'>
 							start
 						</a>
 					</li>
@@ -32,7 +32,7 @@ const Menu = () => {
 				</ul>
 
 				<div className='navLogo'>
-                    <a className='navLogo__link' href="#">
+                    <a className='navLogo__link' href="#opening">
 					    <span className='navLogo__top'>wyszukiwarka</span>
 					    <span className='navLogo__bottom'>szablon</span>
                     </a>
