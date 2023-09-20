@@ -1,0 +1,75 @@
+.quotes {
+	//padding: 40px 0;
+	//height: 32vh;
+	background-image: url('../../../../images/image-from-rawpixel-id-10201247-jpeg.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	padding: 100px 0;
+
+	&::before {
+		content: ' ';
+		display: block;
+		height: 2.8em;
+		background-image: url('../../../../images/torn-border2.png');
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+        z-index: 1;
+	}
+
+    &::after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $text-default;
+		opacity: 0.9;
+		height: 100%;
+		width: 100%;
+		z-index: 0;
+	}
+
+	&__content {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 8em;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__wave {
+		position: relative;
+		margin-top: -7.6em;
+		z-index: 3;
+	}
+
+	.quote__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 21em;
+		color: $text-history-heading;
+		text-transform: lowercase;
+	}
+
+	.quote__text {
+		font-size: 1.6em;
+		font-weight: 900;
+		max-width: 280px;
+	}
+
+	.quote__game {
+		align-self: flex-end;
+		margin-top: 0.6em;
+		margin-right: 3em;
+		font-size: 1em;
+		font-weight: 600;
+	}
+}

@@ -1,0 +1,62 @@
+.about__more {
+  scroll-margin-top: 110px;
+  margin: 3em;
+  padding: 2em;
+  //background-color: #d08770;
+  //border-radius: 1em;
+
+  .more__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content__left {
+    flex: 1 1;
+
+    .left__heading {
+      font-size: 3em;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: $text-history-heading;
+    }
+
+    .left__text {
+      font-size: 1.25em;
+      line-height: 1.5;
+      color: $text-default;
+      margin-top: 1em;
+    }
+  }
+
+  .content__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2em;
+    flex: 1 1;
+
+    &--button {
+      display: inline-block;
+      text-decoration: none;
+      color: $text-button;
+      background-color: $background-button;
+      padding: 50px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition-duration: 0.4s;
+      transform: scale(1);
+
+      &:hover {
+        transform: scale(1.02);
+        transition-duration: 0.4s;
+        box-shadow: 0 20px 20px -5px $shadow;
+      }
+    ;
+
+      &:visited {
+        color: $text-button;
+      }
+    }
+  }
+}
+
