@@ -20,7 +20,7 @@ const Menu = () => {
 						</a>
 					</li>
 					<li className='navList__element'>
-						<a className='navList__link' href='#examples'>
+						<a className='navList__link' href='#example'>
 							przykłady
 						</a>
 					</li>
