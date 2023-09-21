@@ -1,7 +1,6 @@
 .example {
-	//height: calc(80vh - 70px);
 	width: 100%;
-	background-image: linear-gradient(#f8f9fb 50%, #d8dee9);
+	background-image: $background-gradient;
 	padding-bottom: 10em;
 
 	&__content {
@@ -46,7 +45,7 @@
 				transform: scale(1.02);
 				transition-duration: 0.4s;
 				opacity: 1;
-				box-shadow:  20px 20px -5px rgba(0, 0, 0, 0.09);
+				box-shadow:  20px 20px -5px $shadow;
 				
 			}
 		}
@@ -55,9 +54,8 @@
 	&__link {
 		margin-top: 3em;
 		text-decoration: none;
-		color: #4c566a;
-		//background-color: #eceff4;
-		background-color: #d8dee9;
+		color: $text-button;
+		background-color: $background-button-overGradient;
 		padding: 50px;
 		border-radius: 10px;
 		font-weight: bold;
@@ -67,12 +65,12 @@
 		&:hover {
 			transform: scale(1.02);
 			transition-duration: 0.4s;
-			box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.09);
+			box-shadow: 0px 20px 20px -5px $shadow;
 		
 		}
 
 		&:visited {
-			color: #4c566a;
+			color: $text-button;
 		}
 	}
 
