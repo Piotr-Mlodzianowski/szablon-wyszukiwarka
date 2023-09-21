@@ -1,61 +1,62 @@
 .opening {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 80px;
-	height: 28.2em;
-	width: 100%;
-	max-width: 1500px;
-	margin: 2.5em auto;
+  scroll-margin-top: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  height: 28.2em;
+  width: 100%;
+  max-width: 1500px;
+  margin: 2.5em auto;
 
-	&__content {
-		color: $text-default;
-	}
+  &__content {
+    color: $text-default;
+  }
 
-	.content__heading {
-		font-size: 3em;
-		line-height: 1.5;
-		font-weight: 900;
-		max-width: 590px;
-	}
+  .content__heading {
+    font-size: 3em;
+    line-height: 1.5;
+    font-weight: 900;
+    max-width: 590px;
+  }
 
-	.content__paragraph {
-		font-size: 1.25em;
-		line-height: 1.5;
-		margin-top: 1.5em;
-		max-width: 420px;
-	}
+  .content__paragraph {
+    font-size: 1.25em;
+    line-height: 1.5;
+    margin-top: 1.5em;
+    max-width: 420px;
+  }
 
-	.content__buttons {
-		display: flex;
-		gap: 10px;
-		margin-top: 1.8em;
-	}
+  .content__buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.8em;
+  }
 
-	.content__button {
-		font-size: 1em;
-		font-weight: bold;
-		color: $text-button;
-		background-color: $background-button;
-		min-width: 8em;
-		padding: 0.5em;
-		border: 0.125em solid $background-button;
-		border-radius: 5px;
-		text-align: center;
+  .content__button {
+    font-size: 1em;
+    font-weight: bold;
+    color: $text-button;
+    background-color: $background-button;
+    min-width: 8em;
+    padding: 0.5em;
+    border: 0.125em solid $background-button;
+    border-radius: 5px;
+    text-align: center;
 
-		&:nth-of-type(2) {
-			background-color: $background-main;
-		}
+    &:nth-of-type(2) {
+      background-color: $background-main;
+    }
 
-		&:visited {
-			color: $text-button;
-		}
+    &:visited {
+      color: $text-button;
+    }
 
-	}
+  }
 
-	&__image {
-		z-index: 2;
-		width: 20em;
-		height: 20em;
-	}
+  &__image {
+    z-index: 2;
+    width: 20em;
+    height: 20em;
+  }
 }
