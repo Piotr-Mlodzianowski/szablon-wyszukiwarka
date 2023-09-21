@@ -3,6 +3,7 @@ import Menu from './menu/menu';
 import Opening from "./opening/opening";
 import About from "./about/about";
 import Example from "./example/example";
+import Footer from "./footer/footer";
 
 const Homepage = () => {
     return (
@@ -11,6 +12,7 @@ const Homepage = () => {
             <Opening/>
             <About/>
             <Example/>
+            <Footer/>
         </>
     );
 };
