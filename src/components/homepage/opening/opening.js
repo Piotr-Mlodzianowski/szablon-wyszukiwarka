@@ -16,7 +16,7 @@ const Opening = () => {
 						<a href='#about' className='content__button'>
 							O nas
 						</a>
-						<a href='#searchApp' className='content__button'>
+						<a href='searchApp' className='content__button'>
 							Wyszukiwarka
 						</a>
 					</div>

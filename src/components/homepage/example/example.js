@@ -28,7 +28,7 @@ const Example = () => {
                             <img className='example__image' src={require('../../../images/example/image-from-rawpixel-id-9199110-jpeg.jpg')} alt='Compact disc'/>
                     </div>
 
-                    <a href='#searchApp' className='example__link'>Przejdź do wyszukiwarki</a>
+                    <a href='searchApp' className='example__link'>Przejdź do wyszukiwarki</a>
                     
                 </div>
             </div>

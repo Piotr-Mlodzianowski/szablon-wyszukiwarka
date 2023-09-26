@@ -30,7 +30,7 @@ const Menu = () => {
 						</a>
 					</li>
 					<li className='navList__element'>
-						<a className='navList__link' href='#searchApp'>
+						<a className='navList__link' href='searchApp'>
 							wyszukiwarka
 						</a>
 					</li>
