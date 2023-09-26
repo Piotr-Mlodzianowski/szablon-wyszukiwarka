@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {DataContext} from "../../../DataContext";
+
 
 const Example = () => {
+    const {darkMode, backgroundColor} = useContext(DataContext);
+
+    const background = darkMode ? backgroundColor.darkGradient : backgroundColor.lightGradient;
 
     return (
-        <section className='example' id="example">
+        <section className='example' id="example" style={{backgroundImage: background}}>
             <div className='container'>
                 <div className='example__content'>
                     <div className='example__call'>

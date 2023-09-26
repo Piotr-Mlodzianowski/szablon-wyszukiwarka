@@ -1,11 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {DataContext} from "../../../DataContext";
+import DarkMode from "../../darkMode";
 
 
 const Menu = () => {
+	const {darkMode, backgroundColor} = useContext(DataContext);
+
+	const background = darkMode ? backgroundColor.darkBg : backgroundColor.lightBg;
 
 
 	return (
-		<header className='header'>
+		<header className='header' style={{backgroundColor: background}}>
 			<div className='container'>
 
                 <nav className='navigation'>
@@ -28,6 +33,9 @@ const Menu = () => {
 						<a className='navList__link' href='#searchApp'>
 							wyszukiwarka
 						</a>
+					</li>
+					<li className='navList__element'>
+						<DarkMode/>
 					</li>
 				</ul>
 

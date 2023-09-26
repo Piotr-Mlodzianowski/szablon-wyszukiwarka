@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {DataContext} from "../../../DataContext";
 const Footer = () => {
+	const {darkMode, backgroundColor} = useContext(DataContext);
+
+	const background = darkMode ? backgroundColor.darkFooter : backgroundColor.lightFooter;
 
 
 	return (
-		<header className='footer'>
+		<header className='footer' style={{backgroundColor: background}}>
 			<div className='container'>
 
                 <nav className='footer__navigation'>

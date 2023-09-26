@@ -1,10 +1,13 @@
 import React from 'react'
+import {DataProvider} from './DataContext';
 import Homepage from './components/homepage/homepage'
 
 function App() {
 	return (
 		<>
-			<Homepage />
+			<DataProvider>
+				<Homepage />
+			</DataProvider>
 		</>
 	)
 }
