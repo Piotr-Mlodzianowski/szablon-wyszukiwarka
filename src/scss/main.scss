@@ -3,33 +3,39 @@
 @import 'settings/colors.module';
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-		'Droid Sans', 'Helvetica Neue', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background-color: $background-main;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+  'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $background-main;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
-	margin: 0 auto;
-	max-width: 1300px;
+  margin: 0 auto;
+  max-width: 1300px;
 }
 
+//dark mode
 @import 'components/darkMode';
+
+//homepage
 @import 'components/homepage/menu/menu';
 @import 'components/homepage/opening/opening';
 @import 'components/homepage/about/about';
 @import 'components/homepage/example/example';
 @import 'components/homepage/footer/footer';
+
+//searchApp
+@import 'components/searchApp/searchWindow/searchWindow';
 

@@ -17,6 +17,12 @@ $background-dark: #2e3440;
 $background-dark-footer: #1f242c;
 $background-dark-gradient: linear-gradient(#2e3440 50%, #1f242c);
 
+//searchApp
+$app-input-border: #d8dee9;
+$app-label-border-checked: #5e81ac;
+$app-background-button: #88c0d0;
+$app-text-add-button: #f8f9fb;
+
 :export {
   lightBg: $background-main;
   lightFooter: $background-button-overGradient;
