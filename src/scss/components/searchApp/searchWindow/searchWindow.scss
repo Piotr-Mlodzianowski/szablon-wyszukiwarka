@@ -1,0 +1,84 @@
+.form__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 25px;
+  box-shadow: 0 20px 20px -5px $shadow;
+
+  .form {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__input {
+      width: 60%;
+      height: 50px;
+      border: 1px solid $app-input-border;
+      border-radius: 30px;
+      text-align: center;
+      background-color: $background-main;
+      color: $text-button;
+
+      &::placeholder {
+        font-weight: bold;
+        color: $text-button;
+        opacity: 0.1;
+      }
+
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 60%;
+
+      .radios {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1em;
+        //width: 60%;
+
+        .radio {
+          appearance: none;
+
+          &:checked + .radio__label {
+            border: 3px solid $app-label-border-checked;
+
+          }
+
+          &__label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid $app-background-button;
+            border-radius: 30px;
+            font-weight: bold;
+            color: $text-button;
+            min-width: 120px;
+            min-height: 40px;
+          }
+        }
+
+      }
+
+      .addBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $app-background-button;
+        border-radius: 5px;
+        margin-top: 18px;
+        font-weight: bold;
+        color: $app-text-add-button;
+        min-width: 290px;
+        min-height: 40px;
+        //padding: 10px 50px;
+      }
+    }
+  }
+}
+
