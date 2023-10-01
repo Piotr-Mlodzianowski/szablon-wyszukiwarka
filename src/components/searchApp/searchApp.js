@@ -4,6 +4,7 @@ import Menu from "../homepage/menu/menu";
 import SearchWindow from "./searchWindow/searchWindow";
 import SearchPagination from "./searchPagination/searchPagination";
 import SearchList from "./searchList/searchList";
+import SearchFooter from "./searchFooter/searchFooter";
 
 const SearchApp = () => {
     const {
@@ -28,6 +29,7 @@ const SearchApp = () => {
             <SearchWindow/>
             <SearchPagination filteredByNameAndFilter={filteredByNameAndFilter} filter={chosenFilter}/>
             <SearchList/>
+            <SearchFooter/>
         </>
     )
 };
