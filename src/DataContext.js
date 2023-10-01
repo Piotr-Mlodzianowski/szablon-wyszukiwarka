@@ -14,9 +14,10 @@ export const DataProvider = ({children}) => {
         lightFooter: colors.lightFooter,
         darkFooter: colors.darkFooter
     });
-    const [allMedia, setAllMedia] = useState(media);
-    const [chosenFilter, setChosenFilter] = useState("all");
+    const [allMedia, setAllMedia] = useState(media.sort((a, b) => a.title.localeCompare(b.title)));
+    const [chosenFilter, setChosenFilter] = useState("ALL");
     const [enteredTitle, setEnteredTitle] = useState("");
+    const [currentItems, setCurrentItems] = useState([]);
     const [selectedMedia, setSelectedMedia] = useState("");
 
     const values = {
@@ -24,11 +25,14 @@ export const DataProvider = ({children}) => {
         setDarkMode,
         backgroundColor,
         setBackgroundColor,
-        allMedia, setAllMedia,
+        allMedia,
+        setAllMedia,
         chosenFilter,
         setChosenFilter,
         enteredTitle,
         setEnteredTitle,
+        currentItems,
+        setCurrentItems,
         selectedMedia,
         setSelectedMedia
     };
