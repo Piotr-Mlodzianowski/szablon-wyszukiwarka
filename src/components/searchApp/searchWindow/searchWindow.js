@@ -43,25 +43,30 @@ const SearchButtons = () => {
 
 
 const SearchRadios = () => {
-    const {setChosenFilter} = useContext(DataContext);
+    const {chosenFilter, setChosenFilter} = useContext(DataContext);
 
     return (
-        <div className='radios'>
-            <div className='radio__container'>
-                <input className='radio' type="radio" id="all" name="platform" value="all" onChange={(e) => setChosenFilter(e.target.value)}/>
-                <label className='radio__label' htmlFor="all">Wszystkie</label>
-            </div>
-            <div className='radio__container'>
-                <input className='radio' type="radio" id="filter1" name="platform" value="filter1" onChange={(e) => setChosenFilter(e.target.value)}/>
-                <label className='radio__label' htmlFor="filter1">Filtr 1</label>
-            </div>
-            <div className='radio__container'>
-                <input className='radio' type="radio" id="filter2" name="platform" value="filter2" onChange={(e) => setChosenFilter(e.target.value)}/>
-                <label className='radio__label' htmlFor="filter2">Filtr 2</label>
-            </div>
-        </div>
+        <fieldset className='radios'>
+            <SearchRadio label="Wszystkie" value={"ALL"} checked={chosenFilter === "ALL"}
+                         onChange={() => setChosenFilter("ALL")}/>
+            <SearchRadio label="PC" value={"PC"} checked={chosenFilter === "PC"}
+                         onChange={() => setChosenFilter("PC")}/>
+            <SearchRadio label="PSX" value={"PSX"} checked={chosenFilter === "PSX"}
+                         onChange={() => setChosenFilter("PSX")}/>
+        </fieldset>
     )
 }
+
+const SearchRadio = ({label, value, checked, onChange}) => {
+
+    return (
+        <div className='radio__container'>
+            <input className='radio' type="radio" id={value} checked={checked}
+                   onChange={onChange}/>
+            <label className='radio__label' htmlFor={value}>{label}</label>
+        </div>
+    );
+};
 
 const SearchAddButton = () => {
     return (

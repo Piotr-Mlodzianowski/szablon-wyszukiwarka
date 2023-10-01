@@ -22,6 +22,9 @@
       text-align: center;
       background-color: $background-main;
       color: $text-button;
+      @media (max-width: 706px) {
+        width: 100%;
+      }
 
       &::placeholder {
         font-weight: bold;
@@ -35,12 +38,25 @@
       display: flex;
       justify-content: space-between;
       width: 60%;
+      @media (max-width: 1220px) {
+        flex-direction: column;
+      }
+      @media (max-width: 706px) {
+        width: 100%;
+      }
 
       .radios {
         display: flex;
         justify-content: flex-start;
         gap: 1em;
         //width: 60%;
+        @media (max-width: 1220px) {
+          justify-content: flex-start;
+        }
+        @media (max-width: 706px) {
+          justify-content: flex-start;
+          gap: 1em;
+        }
 
         .radio {
           appearance: none;
@@ -60,6 +76,12 @@
             color: $text-button;
             min-width: 120px;
             min-height: 40px;
+            @media (max-width: 706px) {
+              font-size: 0.8em;
+              min-width: 80px;
+              min-height: 40px;
+              gap: 0;
+            }
           }
         }
 
@@ -77,6 +99,11 @@
         min-width: 290px;
         min-height: 40px;
         //padding: 10px 50px;
+        @media (max-width: 706px) {
+          min-width: 120px;
+          min-height: 40px;
+          font-size: 0.8em;
+        }
       }
     }
   }
