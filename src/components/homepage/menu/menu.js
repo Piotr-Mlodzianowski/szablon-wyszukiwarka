@@ -3,53 +3,53 @@ import {DataContext} from "../../../DataContext";
 import DarkMode from "../../darkMode";
 
 
-const Menu = () => {
-	const {darkMode, backgroundColor} = useContext(DataContext);
+const Menu = ({startRoute, aboutRoute, exampleRoute, searchRoute}) => {
+    const {darkMode, backgroundColor} = useContext(DataContext);
 
-	const background = darkMode ? backgroundColor.darkBg : backgroundColor.lightBg;
+    const background = darkMode ? backgroundColor.darkBg : backgroundColor.lightBg;
 
 
-	return (
-		<header className='header' style={{backgroundColor: background}}>
-			<div className='container'>
+    return (
+        <header className='header' style={{backgroundColor: background}}>
+            <div className='container'>
 
                 <nav className='navigation'>
-				<ul className='navList'>
-					<li className='navList__element'>
-						<a className='navList__link' href='#opening'>
-							start
-						</a>
-					</li>
-					<li className='navList__element'>
-						<a className='navList__link' href='#about'>o nas
-						</a>
-					</li>
-					<li className='navList__element'>
-						<a className='navList__link' href='#example'>
-							przykłady
-						</a>
-					</li>
-					<li className='navList__element'>
-						<a className='navList__link' href='searchApp'>
-							wyszukiwarka
-						</a>
-					</li>
-					<li className='navList__element'>
-						<DarkMode/>
-					</li>
-				</ul>
+                    <ul className='navigation__list'>
+                        <li className='list__item'>
+                            <a className='list__link' href={startRoute}>
+                                start
+                            </a>
+                        </li>
+                        <li className='list__item'>
+                            <a className='list__link' href={aboutRoute}>o nas
+                            </a>
+                        </li>
+                        <li className='list__item'>
+                            <a className='list__link' href={exampleRoute}>
+                                przykłady
+                            </a>
+                        </li>
+                        <li className='list__item'>
+                            <a className='list__link' href={searchRoute}>
+                                wyszukiwarka
+                            </a>
+                        </li>
+                        <li className='list__item'>
+                            <DarkMode/>
+                        </li>
+                    </ul>
 
-				<div className='navLogo'>
-                    <a className='navLogo__link' href="#opening">
-					    <span className='navLogo__top'>wyszukiwarka</span>
-					    <span className='navLogo__bottom'>szablon</span>
-                    </a>
-				</div>
+                    <div className='navigation__logo'>
+                        <a className='logo' href={startRoute}>
+                            wyszukiwarka
+                            <span className='logo logo--bottom'>szablon</span>
+                        </a>
+                    </div>
 
                 </nav>
-			</div>
-		</header>
-	)
+            </div>
+        </header>
+    )
 }
 
 export default Menu

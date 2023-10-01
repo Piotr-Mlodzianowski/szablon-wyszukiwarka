@@ -8,7 +8,7 @@ import Footer from "./footer/footer";
 const Homepage = () => {
     return (
         <>
-            <Menu/>
+            <Menu startRoute={"#opening"} aboutRoute={"#about"} exampleRoute={"#example"} searchRoute={"searchApp"}/>
             <Opening/>
             <About/>
             <Example/>

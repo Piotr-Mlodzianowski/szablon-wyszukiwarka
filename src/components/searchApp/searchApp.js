@@ -1,6 +1,6 @@
 import React ,{useContext} from 'react';
 import {DataContext} from "../../DataContext";
-import SearchAppMenu from "./searchAppMenu/searchAppMenu";
+import Menu from "../homepage/menu/menu";
 import SearchWindow from "./searchWindow/searchWindow";
 import SearchPagination from "./searchPagination/searchPagination";
 import SearchList from "./searchList/searchList";
@@ -24,7 +24,7 @@ const SearchApp = () => {
 
     return (
         <>
-            <SearchAppMenu/>
+            <Menu startRoute={"/#opening"} aboutRoute={"/#about"} exampleRoute={"/#example"} searchRoute={"searchApp"}/>
             <SearchWindow/>
             <SearchPagination filteredByNameAndFilter={filteredByNameAndFilter} filter={chosenFilter}/>
             <SearchList/>
