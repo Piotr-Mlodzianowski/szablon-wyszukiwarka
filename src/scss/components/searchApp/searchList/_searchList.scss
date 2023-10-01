@@ -1,44 +1,87 @@
-.list__content {
-  width: 100%;
+.media {
   display: flex;
   justify-content: center;
+  gap: 3em;
+  width: 100%;
+  padding: 0 120px 100px 120px;
+  flex-wrap: wrap;
   margin-top: 2em;
 
+  @media (max-width: 706px) {
+    padding: 0 0 100px 0;
+  }
 
-  .mediaList {
+  .selected {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1em;
-    padding: 0 120px;
-    flex-wrap: wrap;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px $shadow;
+    transform: scale(1);
+    transition-duration: 0.4s;
+    opacity: 0.7;
+    min-width: 320px;
 
+    &:hover {
+      transition-duration: 0.3s;
+      background-color: #5e81ac;
+      opacity: 1;
+    }
 
+    &:hover .title {
+      color: white;
+    }
 
-    .media {
+    &:hover .media__cover {
+      transition-duration: .5s;
+      transform: translateY(-5px)perspective(600px) rotateY(0);
+      //border-radius: 5px;
+
+    }
+
+    &:visited {
+      color: #808080;
+    }
+
+    .media__cover {
+      width: 10em;
+      height: 10em;
+      border-radius: 1em;
+      transform: perspective(600px) rotateY(15deg);
+      transition-duration: 0.4s;
+      cursor: pointer;
+
+    }
+  }
+
+  .media__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .title {
+      color: #808080;
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-top: 1em;
+      max-width: 112px;
+    }
+
+    .more {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-
-
-      .media__cover {
-        width: 16em;
-        height: 16em;
-        border-radius: 1em;
-        transform: scale(1);
-        transition-duration: 0.4s;
-        opacity: 0.7;
-        cursor: pointer;
-
-
-        &:hover {
-          transform: scale(1.02);
-          transition-duration: 0.4s;
-          opacity: 1;
-          box-shadow:  20px 20px -5px $shadow;
-        }
-      }
+      justify-content: center;
+      font-size: 0.8em;
+      font-weight: bold;
+      color: white;
+      height: 2em;
+      width: 5em;
+      background-color: #d08770;
+      border-radius: 4px;
     }
   }
 }
+
+
 
