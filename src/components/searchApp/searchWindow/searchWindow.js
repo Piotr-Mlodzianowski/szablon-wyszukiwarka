@@ -49,10 +49,10 @@ const SearchRadios = () => {
         <fieldset className='radios'>
             <SearchRadio label="Wszystkie" value={"ALL"} checked={chosenFilter === "ALL"}
                          onChange={() => setChosenFilter("ALL")}/>
-            <SearchRadio label="PC" value={"PC"} checked={chosenFilter === "PC"}
-                         onChange={() => setChosenFilter("PC")}/>
-            <SearchRadio label="PSX" value={"PSX"} checked={chosenFilter === "PSX"}
-                         onChange={() => setChosenFilter("PSX")}/>
+            <SearchRadio label="Filter1" value={"filter1"} checked={chosenFilter === "filter1"}
+                         onChange={() => setChosenFilter("filter1")}/>
+            <SearchRadio label="Filter2" value={"filter2"} checked={chosenFilter === "filter2"}
+                         onChange={() => setChosenFilter("filter2")}/>
         </fieldset>
     )
 }
