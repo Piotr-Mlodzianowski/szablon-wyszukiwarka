@@ -2,6 +2,7 @@ import React ,{useContext} from 'react';
 import {DataContext} from "../../DataContext";
 import SearchAppMenu from "./searchAppMenu/searchAppMenu";
 import SearchWindow from "./searchWindow/searchWindow";
+import SearchPagination from "./searchPagination/searchPagination";
 import SearchList from "./searchList/searchList";
 
 const SearchApp = () => {
@@ -25,6 +26,7 @@ const SearchApp = () => {
         <>
             <SearchAppMenu/>
             <SearchWindow/>
+            <SearchPagination filteredByNameAndFilter={filteredByNameAndFilter} filter={chosenFilter}/>
             <SearchList/>
         </>
     )

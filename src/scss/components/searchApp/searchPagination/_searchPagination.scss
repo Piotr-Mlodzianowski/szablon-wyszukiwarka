@@ -1,0 +1,59 @@
+.paginate {
+  margin: 2em auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+
+  .results {
+    color: #808080;
+    font-family: $font-logo;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 0.8em 1.3em;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    //gap: 3em;
+    //margin-top: 2em;
+
+    .page-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #808080;
+      font-family: $font-logo;
+      font-size: 1em;
+      font-weight: bold;
+      //padding: 0.8em 1.3em;
+      height: 40px;
+      width: 48px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: rgba(136, 192, 208, 0.11);
+        transition-duration: 0.4s;
+        border-radius: 10px;
+      }
+    }
+
+    .page-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 48px;
+    }
+
+    .page-current {
+      color: $app-text-add-button;
+      background-color: $app-background-button;
+
+      &:hover {
+        background-color: $app-background-button;
+        border-radius: 5px;
+      }
+    }
+  }
+}
