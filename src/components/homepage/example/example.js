@@ -1,14 +1,25 @@
 import React, {useContext} from 'react'
 import {DataContext} from "../../../DataContext";
+import mediaObject from "../../searchApp/mediaObject/mediaObject";
+import SearchModal from "../../searchApp/searchModal/searchModal";
 
 
 const Example = () => {
-    const {darkMode, backgroundColor} = useContext(DataContext);
+    const {darkMode, backgroundColor, selectedMedia, setSelectedMedia, isModalOn, setIsModalOn} = useContext(DataContext);
+    window.localStorage.setItem("media", JSON.stringify(selectedMedia));
 
     const background = darkMode ? backgroundColor.darkGradient : backgroundColor.lightGradient;
 
+    const handleClick = (media) => {
+        setSelectedMedia(media);
+        setIsModalOn(true);
+    }
+
     return (
         <section className='example' id="example" style={{backgroundImage: background}}>
+
+            {isModalOn && <SearchModal/>}
+
             <div className='container'>
                 <div className='example__content'>
                     <div className='example__call'>
@@ -17,15 +28,12 @@ const Example = () => {
                     <p className='example__paragraph'>Kliknij w przykłady lub skorzystaj z wyszukiwarki</p>
 
                     <div className='example__images'>
-                            <img className='example__image' src={require('../../../images/example/image-from-rawpixel-id-8649331-jpeg.jpg')} alt='Compact disc'/>
-
-                            <img className='example__image' src={require('../../../images/example/image-from-rawpixel-id-8649370-jpeg.jpg')} alt='Compact disc'/>
-
-                            <img className='example__image' src={require('../../../images/example/image-from-rawpixel-id-8649458-jpeg.jpg')} alt='Compact disc'/>
-
-                            <img className='example__image' src={require('../../../images/example/image-from-rawpixel-id-8668923-jpeg.jpg')} alt='Compact disc'/>
-
-                            <img className='example__image' src={require('../../../images/example/image-from-rawpixel-id-9199110-jpeg.jpg')} alt='Compact disc'/>
+                        <div className='example__images'>
+                            {mediaObject.slice(0, 5).map((media) =>
+                                <div key={media.id} onClick={() => handleClick(media)}>
+                                    <img src={media.cover} alt="media cover" className='example__image'/>
+                                </div>)}
+                        </div>
                     </div>
 
                     <a href='searchApp' className='example__link'>Przejdź do wyszukiwarki</a>
