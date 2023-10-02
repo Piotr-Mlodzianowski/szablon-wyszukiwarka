@@ -8,7 +8,7 @@ const SearchPagination = ({filteredByNameAndFilter, filter}) => {
     const [itemOffset, setItemOffset] = useState(0);
     const [currentPage, setCurrentPage] = useState(0);
 
-    const itemsPerPage = 3;
+    const itemsPerPage = 9;
     const endOffset = itemOffset + itemsPerPage;
 
     const pageCount = Math.ceil(filteredByNameAndFilter.length / itemsPerPage);
