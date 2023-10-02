@@ -12,13 +12,17 @@ export const DataProvider = ({children}) => {
         lightGradient: colors.lightGradient,
         darkGradient: colors.darkGradient,
         lightFooter: colors.lightFooter,
-        darkFooter: colors.darkFooter
+        darkFooter: colors.darkFooter,
+        lightFrost: colors.lightFrost,
+        darkFrost:colors.darkFrost
     });
+
     const [allMedia, setAllMedia] = useState(media.sort((a, b) => a.title.localeCompare(b.title)));
     const [chosenFilter, setChosenFilter] = useState("ALL");
     const [enteredTitle, setEnteredTitle] = useState("");
     const [currentItems, setCurrentItems] = useState([]);
     const [selectedMedia, setSelectedMedia] = useState("");
+    const [isModalOn, setIsModalOn] = useState(false);
 
     const values = {
         darkMode,
@@ -34,7 +38,9 @@ export const DataProvider = ({children}) => {
         currentItems,
         setCurrentItems,
         selectedMedia,
-        setSelectedMedia
+        setSelectedMedia,
+        isModalOn,
+        setIsModalOn
     };
 
     return (

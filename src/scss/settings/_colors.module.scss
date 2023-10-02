@@ -11,11 +11,13 @@ $text-history-heading: #d8dee9;
 $logo-main: black;
 $logo-alt: #4c566a;
 $shadow: rgba(0, 0, 0, 0.09);
+$frost-background:rgba(255, 255, 255, .15);
 
 //dark mode
 $background-dark: #2e3440;
 $background-dark-footer: #1f242c;
 $background-dark-gradient: linear-gradient(#2e3440 50%, #1f242c);
+$frost-dark-background: rgba(46, 52, 64, 0.8);
 
 //searchApp
 $app-input-border: #d8dee9;
@@ -27,7 +29,9 @@ $app-text-add-button: #f8f9fb;
   lightBg: $background-main;
   lightFooter: $background-button-overGradient;
   lightGradinet: $background-gradient;
+  lightFrost: $frost-background;
   darkBg: $background-dark;
   darkFooter: $background-dark-footer;
   darkGradient: $background-dark-gradient;
+  darkFrost:$frost-dark-background;
 }
