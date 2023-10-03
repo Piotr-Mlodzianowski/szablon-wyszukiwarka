@@ -18,9 +18,6 @@ const DarkMode = () => {
     }
 
 
-   // const bulbIcon = darkMode ? <img src={require('../images/light_bulb_light.png')} style={{width: "20px"}} alt="Enable dark mode"/> : <img src={require('../images/light_bulb_dark.png')} style={{width: "20px"}} alt="Disable dark mode"/>;
-    //const icons = darkMode ? <img src={require('../images/day-and-night.png')} style={{width: "20px"}} alt="Enable dark mode"/> : <img src={require('../images/night.png')} style={{width: "20px"}} alt="Disable dark mode"/>;
-
     const icons = darkMode ? <img src={require('../images/light_bulb_light.png')} style={{width: "30px"}} alt="Enable dark mode"/> : <img src={require('../images/light_bulb_dark.png')} style={{width: "30px"}} alt="Disable dark mode"/>;
 
 
